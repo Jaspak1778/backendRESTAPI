@@ -152,9 +152,7 @@ ALLOWED_HOSTS = [
     '[::1]', 
     '10.0.2.2', 
     '10.98.100.250',
-    '192.168.22.225' 
-    'your_custom_domain',
-    'djangosocialapp-dveccddwfda6cghe.northeurope-01.azurewebsites.net',
+    '192.168.22.225',    
 ]
 
 # CORS-asetukset
@@ -162,7 +160,6 @@ CORS_ALLOW_ALL_ORIGINS = False  # Tietoturvasyistä tuotantoympäristössä
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173", 
     "http://localhost:3000",  
-    "https://yourdomain.com",
     "http://localhost:5000",
 ]
 
