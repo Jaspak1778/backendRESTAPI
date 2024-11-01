@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% extends 'layout.html' %}
+
+{% block content %}
+  <h2>Syöte</h2>
+  {% for post in posts %}
+    <div class="card mb-3">
+      <div class="card-body">
+        <p class="card-text">{{ post.content }}</p>
+        <p class="card-text">Julkaissut: {{ post.user.username }} on {{ post.created_at }}</p>
+        {% comment %} <p class="card-text">Likes: {{ post.likes.count }}</p> {% endcomment %}
+        <div class="d-flex justify-content-between">
+          <div>
+          
+          </div>
+          {% if post.user == request.user %}
+           
+          {% endif %}
+        </div>
+      </div>
+      {% if post.comments.exists %}
+        <div class="card-footer">
+          <h5>Kommentit</h5>
+          {% for comment in post.comments.all %}
+            <div class="card mb-2">
+              <div class="card-body">
+                <p class="card-text">{{ comment.content }}</p>
+                <p class="card-text">Julkaissut: {{ comment.user.username }} on {{ comment.created_at }}</p>
+                {% if comment.user == request.user %}
+           
+                {% endif %}
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+  {% endfor %}
+{% endblock %}

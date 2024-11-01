@@ -1,0 +1,24 @@
+<!--main/layout.html-->
+{% load bootstrap5 %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elefant - media</title>
+    {% bootstrap_css %}
+    {% load static %}
+    {% comment %}Add this Style page if you are doing any custom styling{% endcomment %}
+    {% comment %} <link rel="stylesheet" href="{% static 'css/styles.css' %}" /> {% endcomment %}
+  </head>
+  <body>
+    {% bootstrap_messages %}
+    <main class="container my-4">
+      {% block content %}
+
+      {% endblock %}
+    </main>
+    {% bootstrap_javascript %}
+  </body>
+</html>
