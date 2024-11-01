@@ -15,8 +15,14 @@ Dev Note: Ohjelma sisältää perus-html-näkymän, testausta varten.
 
 Asennus:
 
-Kansio rakenne : Projekti taso.
+*Kansio rakenne : Projekti taso.*
+
+
+
 ![alt text](image.png)
+
+
+
 
 Kloonaa repo uuteen kansioon jonka voit nimetä miten vain.
 Kansion sisällä osoite kenttään cmd ja anna komento
