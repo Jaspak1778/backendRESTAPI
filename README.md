@@ -6,21 +6,29 @@ Tämä projekti on sosiaalisen median tyylinen sovellus, joka tarjoaa REST API -
 
 Sovelluksen tarkoituksena on tarjota CRUD-toiminnot postauksille, kommenteille ja käyttäjäprofiileille. Käyttämällä Django REST Frameworkia API toimii testiserverillä, jonka voi avata paikalliselle koneelle.
 ##
-Asennus
+Dev Note : Jos haluat käyttää toista tietokantaa niin tee muutokset settings.py tiedostoon ja tee migraatio komennot.
+Admin paneelin kautta voi lisätä tietueita suoraan tietokantaan, esim:Käyttäjiä, Julkaisuja ja kommentteja.
+Näin api kutsujen testaus ja ohjelman testaus helpottuu.
+##
+Dev Note: Ohjelma sisältää perus-html-näkymän, testausta varten.
+##
+
+Asennus:
+
+Kansio rakenne : Projekti taso.
+![alt text](image.png)
 
 Kloonaa repo uuteen kansioon jonka voit nimetä miten vain.
 Kansion sisällä osoite kenttään cmd ja anna komento
 
     git clone <repon-url>
 
-Avaa projekti taso
-
-    cd DjangoSMediaAPP
 
 Avaa IDE antamalla komento.
     
     code .
 
+Varmista että terminaalin polku on projekti tasolla : dir, näkyy:  manage.py
 Luo virtuaali ympäristö IDE:n terminaalissa.
 
     python -m venv venv
@@ -34,10 +42,12 @@ Varmista, että virtuaaliympäristö on aktivoitu ennen asennusta:
 
     pip install -r requirements.txt
 
-Tietokannan migraatiot
+
+Tietokannan migraatiot: sqlite oletus
 
     python manage.py makemigrations main
     python manage.py migrate
+
 
 
 Käynnistä kehityspalvelin
@@ -68,7 +78,11 @@ Admin ULR:
 
     http://127.0.0.1:8000/admin
 
+Lisäasetukset: riippuen ohjelmasta jolla API kutsuja tehdään.
 
-*Muutoksia tulossa*
+*Varaus*
 
 *mahdolliset bugi korjaukset*
+
+
+: Jani Pekkala 2024 

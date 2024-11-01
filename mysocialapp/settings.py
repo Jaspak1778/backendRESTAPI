@@ -67,7 +67,7 @@ WSGI_APPLICATION = 'mysocialapp.wsgi.application'
 # HTTPS-asetukset
 SECURE_SSL_REDIRECT = not DEBUG
 
-'''
+
 
 # AZURE DATABASE .env-tiedostosta
 DATABASES = {
@@ -99,6 +99,8 @@ DATABASES = {
         },
     }
 }
+
+'''
 
 
 # Password validation
